@@ -325,6 +325,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2140263521035439816, guid: 078186db4bb869744a2c4191a05ae0b5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a40245e7eea55f47b9e9b69597335d1, type: 2}
     - target: {fileID: 5515645570568292172, guid: 078186db4bb869744a2c4191a05ae0b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -454,6 +458,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1011441497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011441499}
+  - component: {fileID: 1011441498}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1011441498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011441497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c8c560e733ebf418883c92504e777b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pads:
+  - noteNumber: 36
+    clip: {fileID: 8300000, guid: 40bee108fcc7ad54cbaac1850b5f992f, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - noteNumber: 37
+    clip: {fileID: 8300000, guid: 8b7a643c4bee4124e848263d83bdaf5b, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - noteNumber: 38
+    clip: {fileID: 8300000, guid: e5ea2942aef63804f9211d744f38f569, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - noteNumber: 39
+    clip: {fileID: 8300000, guid: 947037444579bd54c87c7d91170b0422, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - noteNumber: 40
+    clip: {fileID: 8300000, guid: fd9ccbbe06c8ce5468911f6650fbdd54, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - noteNumber: 41
+    clip: {fileID: 8300000, guid: 2cb9329517499954e86193b0cf864c47, type: 3}
+    loop: 1
+    source: {fileID: 0}
+  - noteNumber: 42
+    clip: {fileID: 8300000, guid: 2f1cf1801eba46f47801d9f868058c22, type: 3}
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &1011441499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011441497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960.0247, y: 541.9106, z: -0.14448833}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1632912042
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireflyPrefab: {fileID: 1901648711}
-  maxFireflies: 100
+  maxFireflies: 50
   midiCCNumber: 0
 --- !u!4 &1632912044
 Transform:
@@ -602,3 +679,4 @@ SceneRoots:
   - {fileID: 1632912044}
   - {fileID: 988080907}
   - {fileID: 885396686}
+  - {fileID: 1011441499}
