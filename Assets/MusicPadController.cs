@@ -7,7 +7,7 @@ public class MusicPadController : MonoBehaviour
     public class MusicPad
     {
         public int noteNumber;            // nanoPAD2 pad 編號（MIDI Note）
-        public AudioClip clip;            // 對應的音樂片段
+        public AudioClip clip;            // 音樂片段
         public bool loop = true;          // 是否循環播放
         [HideInInspector] public AudioSource source;
     }
@@ -34,15 +34,31 @@ public class MusicPadController : MonoBehaviour
             if (MidiMaster.GetKeyDown(pad.noteNumber))
             {
                 if (pad.source.isPlaying)
-                    pad.source.Stop();    // 再按一次就停止播放（可改成不關）
+                {
+                    pad.source.Stop(); // 再按一次就停止
+                }
                 else
-                    pad.source.Play();
+                {
+                    StopAllPads();      // 先停止其他
+                    pad.source.Play();  // 撥這一首
+                }
             }
         }
-        for (int i = 0; i < 128; i++)
+         for (int i = 0; i < 128; i++)
         {
             if (MidiMaster.GetKeyDown(i))
                 Debug.Log("Pressed Note: " + i);
+        }
+    }
+
+    void StopAllPads()
+    {
+        foreach (var pad in pads)
+        {
+            if (pad.source != null && pad.source.isPlaying)
+            {
+                pad.source.Stop();
+            }
         }
     }
 }
